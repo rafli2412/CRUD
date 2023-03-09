@@ -1,0 +1,224 @@
+* {
+    font-family: Arial;
+}
+
+:root {
+    --color1 : #F0A500;
+    --color2 : #334756;
+    --color3 : #2C394B;
+    --color4 : #082032;
+
+    --color-success: #DFF2BF;
+    --color-warning : #FEEFB3;
+    --color-eror : #FFD2D2;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #D4ECDD;
+}
+
+.container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    width: 1060px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px var(--color1);
+    transition: 0.5s;
+}
+
+.content div h1 {
+    text-shadow: -3px 0px var(--color1);
+}
+
+.content label {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color4);
+}
+
+input, textarea {
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid #ddd ;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    width: 250px;
+    transition: .5s;
+}
+
+textarea {
+    font-size: 12px;
+}
+
+input:hover, textarea:hover {
+    border-bottom: 3px solid var(--color1) ;
+    color: var(--color4);
+}
+
+textarea:focus {
+    border: 3px solid var(--color1);
+    outline: none;
+}
+
+.content input:focus {
+    outline: none;
+    border-bottom: 3px solid var(--color1) ;
+    color: var(--color1);
+}
+
+button, .submit {
+    text-align: center;
+    background-color: var(--color2);
+    color: var(--color1);
+    font-weight: bolder;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    transition: .5s;
+}
+
+button:hover, .submit:hover {
+    background-color: var(--color1);
+    color: var(--color2);
+}
+
+.content.tanaman-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .tanaman {
+    all: unset;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-column-gap: 20px;
+    position: relative;
+    font-family: sans-serif;
+    text-align: left;
+    border: 2px solid var(--color-con);
+    background-color: var(--color2);
+    border-radius: 10px;
+    width: calc(100% - 50px);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.content .tanaman .photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+}
+
+.content .tanaman .photo .gambar {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: solid 2px var(--color1);
+}
+
+.content .tanaman .section2 {
+    position: relative;
+    background-color: var(--color4);
+    width: calc(100% - 20px);
+    border-radius: 10px;
+    border: solid 2px var(--color1);
+}
+
+.content .tanaman .section2 label {
+    display: inline-block;
+    margin-left: 20px;
+    color: white;
+    width: 20%;
+}
+
+.content .tanaman .section2 .isi {
+    color: var(--color1);
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+/* alert */
+.success {
+    z-index: 1;
+    border-bottom: green solid 2px;
+    background-color: rgb(190, 240, 190);
+    color: green;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    text-align: center;
+}
+
+.warning {
+    z-index: 1;
+    border-bottom: orange solid 2px;
+    background-color: rgb(238, 238, 192);
+    color: orange;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    text-align: center;
+}
+
+.error {
+    z-index: 1;
+    border-bottom: red solid 2px;
+    background-color: rgb(240, 194, 194);
+    color: red;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    text-align: center;
+}
+
+/* position */
+
+.top-right {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+}
